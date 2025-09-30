@@ -23,6 +23,60 @@
 
     <!-- Begin Sidebar -->
     {% block sidebar %}
+    {% customSidebar id="sidebar_menu", side="translate-x-full" %}
+        <div class="z-20 flex flex-col size-full px-3 bg-white dark:bg-secondary-qt_grey-darker 
+            text-secondary-qt_grey-darkest dark:text-secondary-qt_grey-lightest rounded-l-xl transition-colors duration-300 
+            ease-in-out"
+        >
+            <!-- Title -->
+            <div class="flex items-center justify-between gap-x-2 py-5 border-b border-secondary-qt_grey-darkest 
+                dark:border-secondary-qt_grey-lightest"
+            >
+                <h1 class="px-3 py-2 text-xl font-bold">Menu</h1>
+                {% customButton id="sidebar_menu_close", icon="bi-x", iconClasses="text-3xl", 
+                    extraClasses="z-0 md:hidden w-fit text-secondary-qt_grey-extralight hover:shadow-glow-dark-md"
+                %}
+            </div>
+            
+            <!-- Content -->
+            <nav class="flex-1 flex flex-col gap-y-6 h-full py-5 px-2 font-semibold overflow-y-auto 
+                overscroll-contain scrollbar-hide"
+            >
+                <div class="flex flex-col gap-y-3">
+                    <h2 class="flex items-center gap-x-2 text-secondary-qt_grey-ultradark dark:text-secondary-qt_grey-ultralight">
+                        <i class="bi bi-compass text-md"></i> <span class="text-lg">{{ "navigation" | i18n }}</span>
+                    </h2>
+                    <ul class="flex flex-col gap-y-3 gap-x-6 text-sm font-semibold uppercase">
+                        {% block nav_links %}
+                        {% endblock nav_links %}
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-y-3">
+                    <h2 class="flex items-center gap-x-2 text-secondary-qt_grey-ultradark dark:text-secondary-qt_grey-ultralight">
+                        <i class="bi bi-sliders text-md"></i> <span class="text-lg">{{ "preferences" | i18n }}</span>
+                    </h2>
+                    <div class="grid grid-cols-2 place-items-center gap-x-3">
+                        {% langSelector id="lang_selector", buttonIcon="bi-chevron-down", 
+                            buttonClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark 
+                                border-secondary-qt_grey-lightest dark:border-secondary-qt_grey", 
+                            iconClasses="text-secondary-qt_grey-dark dark:text-secondary-qt_grey-light", 
+                            dropdownClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark
+                                border-secondary-qt_grey-lightest dark:border-secondary-qt_grey"
+                        %}
+        
+                        {% customSwitch id="theme_switch", leftIcon="bi-sun-fill", rightIcon="bi-moon-fill", 
+                            extraClasses="p-1 bg-secondary-qt_grey-ultralight dark:bg-secondary-qt_grey-darkest 
+                                border-secondary-qt_grey-ultralight dark:border-secondary-qt_grey-darkest", 
+                            leftIconClasses="text-xl text-primary-qt_orange-light", 
+                            rightIconClasses="text-xl text-primary-qt_blue-darker", 
+                            thumbClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark" 
+                        %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+    {% endcustomSidebar %}
     {% endblock sidebar %}
     <!-- End Sidebar -->
 
@@ -41,10 +95,8 @@
 
                 <div id="navbar-nav" class="hidden md:block">
                     <ul class="flex items-center gap-x-6 text-sm font-semibold uppercase">
-                        <li class="nav-item"><a class="nav-link" href="https://backend.comandaya.app/login/">Iniciar Sesion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services-section">Nuestros servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features-section">Caracteristicas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#plans-section">Planes</a></li>
+                        {% block nav_links %}
+                        {% endblock nav_links %}
                     </ul>
                 </div>
             </nav>
@@ -55,6 +107,13 @@
             {% block content %}
             {% endblock content %}
         </div>
+
+        <footer class="flex justify-center p-4 bg-white">
+            <p class="text-sm text-center">
+                © 2025 ComandaYa - Todos los derechos reservados. 
+                <a href="https://quinoto.tech/es/" class="text-[#5f0099] hover:underline">Powered by Quinoto Tech</a>
+            </p>
+        </footer>
     </div>
     <!-- End Main Content -->
     
