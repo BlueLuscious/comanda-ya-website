@@ -19,7 +19,7 @@
     {% block extra_heads %}{% endblock extra_heads %}
     <!-- End - Extra Heads -->
 </head>
-<body data-filename="{{ fileName }}" class="body flex h-screen font-poppins font-normal">
+<body data-filename="{{ fileName }}" class="body flex min-h-screen font-poppins font-normal">
 
     <!-- Begin Sidebar -->
     {% block sidebar %}
@@ -27,7 +27,7 @@
     <!-- End Sidebar -->
 
     <!-- Begin Main Content -->
-    <div class="flex-1 flex flex-col overflow-hidden bg-linear-to-l from-[#27138a] to-[#4131cc] 
+    <div class="flex-1 flex flex-col bg-linear-to-l from-[#27138a] to-[#4131cc] 
         before:content-[''] before:absolute before:inset-0 before:bg-[url('/assets/images/pattern.png')]"
     >
         {% block navbar %}
