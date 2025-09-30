@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@config "../../../tailwind.config.mjs";
+
+button { cursor: pointer; }
+
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+
+.scrollbar-beautify::-webkit-scrollbar {
+    width: .8rem;
+}
+.scrollbar-beautify::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+.scrollbar-beautify::-webkit-scrollbar-thumb {
+  background: #6a0fcc;
+  border-radius: 6px;
+  border: 2px solid #f0f0f0;
+}
+.scrollbar-beautify::-webkit-scrollbar-thumb:hover {
+  background: #8e1efc;
+}

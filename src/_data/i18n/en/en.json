@@ -1,0 +1,28 @@
+{
+    "motto": "We're mediators between the future and your business.",
+    "home": "Home",
+    "team": "Our Team",
+    "P&S": "Products & Services",
+    "contact_us": "Contact Us",
+    "consult": "Consult",
+    "P&S_data": {
+        "static_web": {
+            "title": "Static Website",
+            "description": "Custom static website creation",
+            "image": "bg-[url('/assets/images/services/static-web.jpg')]",
+            "imageDark": "dark:bg-[url('/assets/images/services/static-web-dark.jpg')]"
+        },
+        "dynamic_web": {
+            "title": "Dynamic Website",
+            "description": "Custom dynamic website creation",
+            "image": "bg-[url('/assets/images/services/dynamic-web.jpg')]",
+            "imageDark": "dark:bg-[url('/assets/images/services/dynamic-web-dark.jpg')]"
+        }
+    },
+    "languages": {
+        "es": { "name": "Spanish" },
+        "en": { "name": "English" }
+    },
+    "navigation": "Navigation",
+    "preferences": "Preferences"
+}

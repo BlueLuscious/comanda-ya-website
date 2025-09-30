@@ -1,0 +1,178 @@
+<section id="plans-section" class="relative flex-1 flex justify-center lg:h-fit px-6 py-12 lg:py-24 bg-[#f8f9fa]">
+    <div class="flex flex-col items-center lg:justify-evenly gap-y-12 size-full md:max-w-6xl text-center">
+
+        <div class="flex flex-col items-center">
+            <h1 class="text-2xl md:text-3xl font-bold">Planes y Precios</h1>
+            <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+            </span>
+            <p class="text-lg text-secondary-qt_grey-light max-w-3xl">Elige el plan que mejor se adapte a tu negocio.</p>
+        </div>
+
+        <div class="w-full">
+
+            <!-- Begin - Plan Tabs -->
+            <div class="w-full border-b border-gray-200">
+                <ul class="flex justify-center -mb-px text-sm font-medium text-center">
+                    <li>
+                        <button type="button" id="plan-with-tables-btn" class="inline-block px-4 py-2 text-gray-600 rounded-t-lg 
+                            border border-gray-200 border-b-transparent bg-white"
+                        >Con Mesas</button>
+                    </li>
+                    <li>
+                        <button type="button" id="plan-without-tables-btn" class="inline-block px-4 py-2 text-purple-600 rounded-t-lg 
+                            border-b-2 border-transparent hover:border-purple-600"
+                        >Sin Mesas</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- End - Plan Tabs -->
+
+            <!-- Begin - Plan With Tables -->
+            <div id="plan-with-tables" class="grid md:grid-cols-3 items-center gap-12 md:gap-6 md:px-6 py-12">
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
+                >
+                    <h4 class="text-2xl font-semibold">Básico</h4>
+                    <div class="text-4xl font-bold">
+                        $165<span class="text-base text-secondary-qt_grey font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Hasta 5 mesas</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos QR</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte básico</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-linear-to-tl from-[#cd9ffa] to-[#7a60ff] 
+                    text-white rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md 
+                    hover:-translate-y-2.5"
+                >
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span class="px-4 py-2 text-xs font-semibold bg-[#ff6b6b] text-white rounded-full shadow">
+                            Más Popular
+                        </span>
+                    </div>
+                    <h4 class="text-2xl font-semibold">Profesional</h4>
+                    <div class="text-4xl font-bold">
+                        $200<span class="text-base text-white/70 font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-white/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Hasta 20 mesas</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Dashboard completo</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Bot IA</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Reportes avanzados</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Soporte prioritario</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-white text-sm text-[#7a60ff] font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:text-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5
+                ">
+                    <h4 class="text-2xl font-semibold">Enterprise</h4>
+                    <div class="text-4xl font-bold">
+                        $250<span class="text-base text-secondary-qt_grey font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Mesas ilimitadas</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Múltiples sucursales</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> IA personalizada</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Integración completa</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+            </div>
+            <!-- End - Plan With Tables -->
+
+            <!-- Begin - Plan Without Tables -->
+            <div id="plan-without-tables" class="hidden grid md:grid-cols-3 items-center gap-12 md:gap-6 md:px-6 py-12">
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
+                >
+                    <h4 class="text-2xl font-semibold">Starter</h4>
+                    <div class="text-4xl font-bold">
+                        $100<span class="text-base text-secondary-qt_grey font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pedidos online</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte básico</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-linear-to-tl from-[#cd9ffa] to-[#7a60ff] 
+                    text-white rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md 
+                    hover:-translate-y-2.5"
+                >
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span class="px-4 py-2 text-xs font-semibold bg-[#ff6b6b] text-white rounded-full shadow">
+                            Más Vendido
+                        </span>
+                    </div>
+                    <h4 class="text-2xl font-semibold">Pro Online</h4>
+                    <div class="text-4xl font-bold">
+                        $180<span class="text-base text-white/70 font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-white/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Tienda online</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Integración con IA</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Reportes basicos</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check"></i> Soporte prioritario</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-white text-sm text-[#7a60ff] font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:text-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5
+                ">
+                    <h4 class="text-2xl font-semibold">Ultimate Online</h4>
+                    <div class="text-4xl font-bold">
+                        $300<span class="text-base text-secondary-qt_grey font-medium">/año</span>
+                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Marketplace integrado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> SEO avanzado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Marketing automatizado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte 24/7</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+            </div>
+            <!-- End - Plan Without Tables -->
+        </div>
+
+        <div class="max-w-3xl text-center">
+            <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+            </span>
+            <h6>
+                No encontras un plan que se adapte a tu negocio? <span class="font-semibold">¡No hay problema!</span> contactanos y solicitá tu 
+                <a href="#cotizacion" class="text-blue-500 font-bold hover:underline">cotización personalizada</a>.
+            </h6>
+        </div>
+
+    </div>
+</section>

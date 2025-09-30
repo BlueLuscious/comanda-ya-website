@@ -1,0 +1,31 @@
+---
+fileName: index
+---
+
+{% extends "base.html" %}
+
+
+{% block sidebar %}
+{% include "components/menu.html" %}
+{% endblock sidebar %}
+
+{% block content %}
+<section class="z-10 flex-1 flex flex-col gap-y-8 overflow-hidden">
+    <div class="overflow-y-auto overscroll-contain scrollbar-beautify">
+        {% include "components-index/home-section.html" %}
+        {% include "components-index/services-section.html" %}
+        {% include "components-index/adaptability-section.html" %}
+        {% include "components-index/technology-section.html" %}
+        {% include "components-index/features-section.html" %}
+        {% include "components-index/testimonial-section.html" %}
+        {% include "components-index/plans-section.html" %}
+        {% include "components-index/contact-section.html" %}
+
+        <footer class="flex justify-center p-4 bg-white">
+            <p class="text-sm">
+                2025 <a href="https://quinoto.tech/es/" class="text-[#5f0099] hover:underline">powered by Quinoto Tech</a>
+            </p>
+        </footer>
+    </div>
+</section>
+{% endblock content %}

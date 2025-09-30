@@ -1,0 +1,105 @@
+// Custom Card Alternative
+eleventyConfig.addPairedShortcode("customCardAlt", function(content, id) {
+    const service = services.get(id)
+    return `
+        <article class="flex flex-col w-full rounded-lg shadow-md overflow-hidden transition-transform duration-300
+            group-hover/card-stack:scale-90 hover:scale-100"
+        >
+            <div class="size-full min-h-64 ${service.image ? service.image : "" } 
+                ${service.imageDark ? service.imageDark : "" } bg-center bg-cover bg-no-repeat 
+                transition-discrete duration-300 ease-in-out"
+            ></div>
+            <div class="flex flex-col gap-y-4 size-full min-h-64 p-6 bg-white dark:bg-secondary-qt_grey-darker 
+                transition-colors duration-300 ease-in-out"
+            >
+                <h1 class="text-xl text-secondary-qt_grey-darker dark:text-secondary-qt_grey-lighter font-semibold">
+                    ${service.title}
+                </h1>
+                <p class="text-secondary-qt_grey-dark dark:text-secondary-qt_grey-light">${service.description}</p>
+                ${content}
+            </div>
+        </article>
+    `;
+});
+
+// Example: Custom Card Alternative.
+// {% customButton id="consult_dynamic_web", label="Consultar", 
+//     extraClasses="self-end w-fit mt-auto bg-primary-qt_orange-lightest dark:bg-primary-qt_blue-darkest 
+//         text-secondary-qt_grey-darker dark:text-primary-qt_orange-ultralight shadow-lg hover:shadow-glow-dark-md 
+//         dark:hover:shadow-glow-light-md", 
+//     labelClasses="font-semibold"
+// %}
+
+
+
+
+
+// I18N Translation Filter
+module.exports = function(eleventyConfig) {
+  const translations = require("./src/_data/i18n");
+
+  eleventyConfig.addFilter("i18n", function(key, lang = "en") {
+    return translations?.[lang]?.[key] ?? `[${key}]`;
+  });
+};
+
+// Example: I18N Translation Filter.
+// <h1>{{ "hello" | i18n(lang) }}</h1>
+
+
+
+
+
+// Lang Selector Template
+<div id="lang_selector" class="relative inline-block w-full">
+    <!-- Selector -->
+    <button id="lang_selector_button" class="flex items-center justify-between gap-x-2 w-full p-2 
+        bg-white text-left border border-gray-300 rounded-md shadow-sm cursor-pointer"
+    >
+        <span class="flex items-center gap-x-2">
+            <img src="{{ '../assets/images/langs/flags/' ~ page.lang ~ '.png' }}" class="size-4 rounded-full">
+            {{ page.lang|upper }}
+        </span>
+        <i class="bi bi-chevron-down text-md text-gray-500"></i>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div id="lang_selector_dropdown" class="absolute z-10 my-1 bottom-full w-full bg-white border border-gray-300 
+        rounded-md shadow-lg transform transition-all duration-200 ease-out scale-95 opacity-0 pointer-events-none"
+    >
+        <ul>
+            {% for link in page.url | locale_links %}
+            <li>
+                <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}"
+                    class="flex items-center gap-x-2 w-full p-2 text-sm text-left hover:bg-gray-100"
+                >
+                    <img src="{{ '../assets/images/langs/flags/' ~ link.lang ~ '.png' }}" class="size-4 rounded-full">
+                    {{ ("languages" | i18n)[link.lang].name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+// Example: Theme Button (Use with ThemeButtonController).
+// Template:
+{% customButton id="theme_button", icon="bi-sun-fill", 
+    iconClasses="text-primary-qt_orange-light dark:text-primary-qt_blue-darker", 
+    extraClasses="w-fit bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-darkest 
+        shadow-lg hover:shadow-glow-dark-sm dark:hover:shadow-glow-light-sm"
+%}
+// JS:
+const themeButton = document.getElementById("theme_button");
+new ThemeButtonController(themeButton, themeManager, 
+    { iconSun: "bi-sun", iconMoon: "bi-moon" }
+);
+
+
+
+
+

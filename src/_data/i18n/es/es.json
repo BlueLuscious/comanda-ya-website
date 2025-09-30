@@ -1,0 +1,28 @@
+{
+    "motto": "Somos mediadores entre el futuro y tu negocio.",
+    "home": "Inicio",
+    "team": "Nuestro Equipo",
+    "P&S": "Productos & Servicios",
+    "contact_us": "Contactanos",
+    "consult": "Consultar",
+    "P&S_data": {
+        "static_web": {
+            "title": "Sitio Web Estático",
+            "description": "Creación de sitio web estático a medida",
+            "image": "bg-[url('/assets/images/services/static-web.jpg')]",
+            "imageDark": "dark:bg-[url('/assets/images/services/static-web-dark.jpg')]"
+        },
+        "dynamic_web": {
+            "title": "Sitio Web Dinámico",
+            "description": "Creación de sitio web dinámico a medida",
+            "image": "bg-[url('/assets/images/services/dynamic-web.jpg')]",
+            "imageDark": "dark:bg-[url('/assets/images/services/dynamic-web-dark.jpg')]"
+        }
+    },
+    "languages": {
+        "es": { "name": "Español" },
+        "en": { "name": "Inglés"}
+    },
+    "navigation": "Navegación",
+    "preferences": "Preferencias"
+}
