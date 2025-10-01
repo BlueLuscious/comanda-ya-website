@@ -49,12 +49,18 @@ export class IndexView extends BaseView {
 
             const subject = encodeURIComponent("Solicitud de demo");
             const body = encodeURIComponent(
-                `Nombre completo: ${full_name}\nEmail: ${email}\nTeléfono: ${phone_number}\nNombre del restaurante: ${resto_name}\n
-                Tipo de negocio: ${business_type}\nCantidad de mesas aproximada: ${tables_qt}\nUbicación del local: ${location}\n
-                Comentarios: ${comments}`
+                `Nombre completo: ${full_name}.
+                Email: ${email}.
+                Teléfono: ${phone_number}.
+                Nombre del restaurante: ${resto_name}.
+                Tipo de negocio: ${business_type}.
+                Cantidad de mesas aproximada: ${tables_qt} mesas.
+                Ubicación del local: ${location}.
+                Comentarios: ${comments}.`
             );
 
-            window.location.href = `mailto:tuemail@ejemplo.com?subject=${subject}&body=${body}`;
+            const receiver = "info@comandaya.com.ar" // TODO: Change email
+            window.location.href = `mailto:${receiver}?subject=${subject}&body=${body}`;
         });
         // End Forms //
     
