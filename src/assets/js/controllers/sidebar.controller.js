@@ -14,7 +14,9 @@ export class SidebarController {
     }
 
     init() {
-        this.sidebarButton.addEventListener("click", () => this.toggleSidebar());
+        if (this.sidebarButton) {
+            this.sidebarButton.addEventListener("click", () => this.toggleSidebar());
+        }
         this.sidebarBackdrop.addEventListener("click", () => this.closeSidebar());
     }
 
