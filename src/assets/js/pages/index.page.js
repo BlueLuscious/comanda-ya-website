@@ -38,14 +38,14 @@ export class IndexView extends BaseView {
         document.getElementById("demo_form").addEventListener("submit", function(e) {
             e.preventDefault();
 
-            const full_name = encodeURIComponent(document.querySelector("[name='full_name']").value);
-            const email = encodeURIComponent(document.querySelector("[name='email']").value);
-            const phone_number = encodeURIComponent(document.querySelector("[name='phone_number']").value);
-            const resto_name = encodeURIComponent(document.querySelector("[name='resto_name']").value);
-            const business_type = encodeURIComponent(document.querySelector("[name='business_type']").value);
-            const tables_qt = encodeURIComponent(document.querySelector("[name='tables_qt']").value);
-            const location = encodeURIComponent(document.querySelector("[name='location']").value);
-            const comments = encodeURIComponent(document.querySelector("[name='comments']").value);
+            const full_name = document.querySelector("[name='full_name']").value;
+            const email = document.querySelector("[name='email']").value;
+            const phone_number = document.querySelector("[name='phone_number']").value;
+            const resto_name = document.querySelector("[name='resto_name']").value;
+            const business_type = document.querySelector("[name='business_type']").value;
+            const tables_qt = document.querySelector("[name='tables_qt']").value;
+            const location = document.querySelector("[name='location']").value;
+            const comments = document.querySelector("[name='comments']").value;
 
             const subject = encodeURIComponent("Solicitud de demo");
             const body = encodeURIComponent(
