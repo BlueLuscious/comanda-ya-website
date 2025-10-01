@@ -22,6 +22,19 @@ export class IndexView extends BaseView {
             link.addEventListener("click", () => sidebarController.closeSidebar());
         });
         // End Menu Sidebar //
+
+        // Begin Forms //
+        const demoMenu = document.getElementById("demo_form_sidebar");
+        const demoMenuController = new SidebarController(demoMenu);
+
+        const demoMenuOpenBtns = document.querySelectorAll("[data-demo-form-open]");
+        demoMenuOpenBtns.forEach(btn => {
+            btn.addEventListener("click",() => demoMenuController.openSidebar());
+        });
+
+        const demoMenuCloseBtn = document.getElementById(`${demoMenuController.sidebar.id}_close`);
+        demoMenuCloseBtn.addEventListener("click",() => demoMenuController.closeSidebar());
+        // End Forms //
     
         // Begin Language Selector //
         const langSelector = document.getElementById("lang_selector");
