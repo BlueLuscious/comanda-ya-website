@@ -1,0 +1,111 @@
+{% customSidebar id="demo_form_sidebar", side="translate-x-full", maxWidth="max-w-3xl", displayClass="block" %}
+    <div class="z-40 flex flex-col gap-y-6 size-full px-3 py-5 bg-[#f8f9fa] dark:bg-secondary-qt_grey-darker 
+        text-secondary-qt_grey-darkest dark:text-secondary-qt_grey-lightest rounded-l-xl transition-colors duration-300 
+        ease-in-out"
+    >
+        <!-- Title -->
+        <header class="flex flex-col items-center justify-center text-center">
+            <h1 class="px-3 py-2 text-xl md:text-3xl text-center font-bold">¡Probá Comanda Ya gratis!</h1>
+            <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+            </span>
+            <p class="text-base max-w-xl">Completá el formulario y te contactaremos para configurar tu demo personalizada</p>
+        </header>
+        
+        <!-- Form -->
+        <form id="demo_form" enctype="text/plain" 
+            class="flex-1 flex flex-col gap-y-6 p-3 font-semibold overflow-hidden"
+        >
+            <div class="grid md:grid-cols-2 gap-6 p-3 text-base border-y border-secondary-qt_grey-lightest overflow-y-auto overscroll-contain">
+                <div class="flex flex-col gap-y-2">
+                    <label for="full_name">Nombre completo <span class="text-red-600">*</span></label>
+                    <input type="text" id="full_name" name="full_name" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                    >
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <label for="email">Email <span class="text-red-600">*</span></label>
+                    <input type="email" id="email" name="email" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                    >
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <label for="phone_number">Teléfono <span class="text-red-600">*</span></label>
+                    <input type="tel" id="phone_number" name="phone_number" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                    >
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <label for="resto_name">Nombre del restaurante <span class="text-red-600">*</span></label>
+                    <input type="text" id="resto_name" name="resto_name" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                    >
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <label for="business_type">Tipo de negocio</label>
+                    <select id="business_type" name="business_type" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                    >
+                        <option value="">Seleccionar...</option>
+                        <option value="restaurante">Restaurante</option>
+                        <option value="bar">Bar</option>
+                        <option value="cafeteria">Cafetería</option>
+                        <option value="food_truck">Food Truck</option>
+                        <option value="parrilla">Parrilla</option>
+                        <option value="pizzeria">Pizzería</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <label for="tables_qt">Cantidad de mesas aproximada</label>
+                    <select id="tables_qt" name="tables_qt" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
+                        transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                    >
+                        <option value="">Seleccionar...</option>
+                        <option value="1-5">1 a 5 mesas</option>
+                        <option value="6-15">6 a 15 mesas</option>
+                        <option value="16-30">16 a 30 mesas</option>
+                        <option value="30+">Más de 30 mesas</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 flex flex-col gap-y-2">
+                    <label for="location">Ubicación del local</label>
+                    <input type="text" id="location" name="location" placeholder="Ciudad, Provincia" class="p-3 text-lg border-2 
+                        border-[#d9dcdf] rounded-lg outline-none transition-all duration-300 ease-in-out focus:border-[#7a60ff] 
+                        focus:ring-3 focus:ring-[#7a60ff40]"
+                    >
+                </div>
+                <div class="md:col-span-2 flex flex-col gap-y-2">
+                    <label for="comments">¿Qué te interesa más de Comanda Ya?</label>
+                    <textarea id="comments" name="comments" rows="4" 
+                        placeholder="Contanos qué funcionalidades te interesan más o si tenés alguna pregunta específica..." 
+                        class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none transition-all duration-300 
+                        ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                    ></textarea>
+                </div>
+            </div>
+                            
+            <div class="flex flex-col gap-y-6 text-center">
+                <!-- Terms & Conditions -->
+                <div class="flex items-center gap-x-2">
+                    <input type="checkbox" class="form-check-input" id="accept_terms" name="accept_terms" required>
+                    <label class="form-check-label" for="accept_terms">
+                        Acepto recibir información comercial y acepto los términos y condiciones <span class="text-red-600">*</span>
+                    </label>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex items-center justify-center gap-x-6 mt-auto">
+                    <button type="button" id="demo_form_sidebar_close" class="self-center px-8 py-4 bg-white text-sm 
+                        text-[#fe3b3b] font-semibold rounded-full shadow-center-dark transition-all duration-300 ease-in-out 
+                        hover:text-[#cc220f] hover:shadow-center-dark-md hover:-translate-y-1"
+                    >Cerrar</button>
+                    <button type="submit" id="demo_form_sidebar_submit" class="self-center px-8 py-4 bg-[#7a60ff] text-sm 
+                        text-white font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Solicitar Demo Gratuita</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endcustomSidebar %}

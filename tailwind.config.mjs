@@ -53,6 +53,13 @@ export default {
                     "0%": { opacity: "0", transform: "translateY(100%)" },
                     "100%": { opacity: "1", transform: "translateY(0)" },
                 },
+                heartbeat: {
+                    '0%, 40%': { transform: 'scale(1)' },
+                    '10%': { transform: 'scale(1.1)' },
+                    '20%': { transform: 'scale(1)' },
+                    '30%': { transform: 'scale(1.1)' },
+                    '100%': { transform: 'scale(1)' },
+                },
                 radiant_glow: {
                     "0%": {boxShadow: "0px 0px 0px rgba(255, 255, 255, 0.4)",},
                     "50%": {boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.7), 0px 0px 50px rgba(255, 255, 255, 0.4)",},
@@ -69,6 +76,7 @@ export default {
             },
             animation: {
                 fade_in_up: "fade_in_up 1s ease-out forwards",
+                heartbeat: 'heartbeat 2.5s ease-in-out infinite',
                 medium_glow_pulse: "radiant_glow 1.5s ease-in-out infinite",
                 gentle_bounce: "gentle_bounce 1.5s ease-in-out infinite",
                 blink7: "blink 1s step-end 7 forwards",

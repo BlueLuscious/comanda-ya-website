@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
                 ${dark_colour_backdrop !== "" ? dark_colour_backdrop : "dark:bg-secondary-qt_grey/50"}"
             ></div>
 
-            <aside id="${id}" class="z-20 fixed top-0 right-0 w-full h-screen 
+            <aside id="${id}" class="z-20 fixed top-0 right-0 w-full h-dvh 
                 flex flex-col gap-y-6 transition-transform duration-300 ease-in-out
                 ${maxWidth !== "" ? maxWidth : "max-w-xs"} 
                 ${side !== "" ? side : "-translate-x-full"}" 
