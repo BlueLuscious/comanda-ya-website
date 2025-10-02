@@ -1,5 +1,6 @@
 import { CustomBaseView } from "./base.page.js";
 import { SidebarController } from "../controllers/sidebar.controller.js";
+import { SwitchController } from "../controllers/switch.controller.js";
 
 
 export class IndexView extends CustomBaseView {
@@ -7,7 +8,7 @@ export class IndexView extends CustomBaseView {
     init() {
         super.init();
 
-        // Begin Forms //
+        // Begin - Demo Form //
         const demoMenu = document.getElementById("demo_form_sidebar");
         const demoMenuController = new SidebarController(demoMenu);
 
@@ -46,7 +47,84 @@ export class IndexView extends CustomBaseView {
             const receiver = "info@comandaya.com.ar" // TODO: Change email
             window.location.href = `mailto:${receiver}?subject=${subject}&body=${body}`;
         });
-        // End Forms //
+        // End - Demo Form //
+
+
+        // Begin - Membership Form //
+        const membershipMenu = document.getElementById("membership_form_sidebar");
+        const membershipMenuController = new SidebarController(membershipMenu);
+
+        const membershipMenuOpenBtns = document.querySelectorAll("[data-membership-form-open]");
+        membershipMenuOpenBtns.forEach(btn => {
+            btn.addEventListener("click",() => membershipMenuController.openSidebar());
+        });
+
+        const membershipMenuCloseBtn = document.getElementById(`${membershipMenuController.sidebar.id}_close`);
+        membershipMenuCloseBtn.addEventListener("click",() => membershipMenuController.closeSidebar());
+
+        const personSwitch = document.getElementById("person_switch");
+        if (personSwitch) {
+            const personSwitchController = new SwitchController(personSwitch);
+            const naturalPersonFields = document.querySelectorAll("[data-natural-person]");
+            const legalPersonFields = document.querySelectorAll("[data-legal-person]");
+
+            if (!personSwitchController.is_toggle) {
+                naturalPersonFields.forEach(field => {
+                    field.classList.remove("hidden");
+                    field.querySelector("input").required = true;
+                    field.querySelector("input").value = ""
+                });
+                legalPersonFields.forEach(field => {
+                    field.classList.add("hidden");
+                    field.querySelector("input").required = false;
+                    field.querySelector("input").value = ""
+                });
+            } else {
+                naturalPersonFields.forEach(field => {
+                    field.classList.add("hidden");
+                    field.querySelector("input").required = false;
+                    field.querySelector("input").value = ""
+                });
+                legalPersonFields.forEach(field => {
+                    field.classList.remove("hidden");
+                    field.querySelector("input").required = true;
+                    field.querySelector("input").value = ""
+                });
+            }
+        
+            personSwitch.addEventListener("switchChange", (e) => {
+                const isToggle = e.detail.value;
+                if (!isToggle) {
+                    naturalPersonFields.forEach(field => {
+                        field.classList.remove("hidden");
+                        field.querySelector("input").required = true;
+                        field.querySelector("input").value = ""
+                    });
+                    legalPersonFields.forEach(field => {
+                        field.classList.add("hidden");
+                        field.querySelector("input").required = false;
+                        field.querySelector("input").value = ""
+                    });
+                } else {
+                    naturalPersonFields.forEach(field => {
+                        field.classList.add("hidden");
+                        field.querySelector("input").required = false;
+                        field.querySelector("input").value = ""
+                    });
+                    legalPersonFields.forEach(field => {
+                        field.classList.remove("hidden");
+                        field.querySelector("input").required = true;
+                        field.querySelector("input").value = ""
+                    });
+                }
+            });
+        }
+
+        document.getElementById("membership_form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            // TODO: Email Integration
+        })
+        // End - Membership Form //
 
         // Begin Animate Elements // // TODO: Create --> Method
         const elements = document.querySelectorAll("[data-animate]");
