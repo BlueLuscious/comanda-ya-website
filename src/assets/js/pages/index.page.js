@@ -1,27 +1,11 @@
-import { BaseView } from "../core/views/index.js";
-
-import { LangSelectorController } from "../controllers/lang-selector.controller.js";
+import { CustomBaseView } from "./base.page.js";
 import { SidebarController } from "../controllers/sidebar.controller.js";
-import { ThemeSwitchController } from "../theme/index.js";
 
 
-export class IndexView extends BaseView {
+export class IndexView extends CustomBaseView {
 
     init() {
         super.init();
-
-        // Begin Menu Sidebar //
-        const menuSidebar = document.getElementById("sidebar_menu");
-        const sidebarController = new SidebarController(menuSidebar);
-
-        const menuSidebarCloseBtn = document.getElementById("sidebar_menu_close");
-        menuSidebarCloseBtn.addEventListener("click",() => sidebarController.closeSidebar());
-    
-        const menuSidebarLinks = document.querySelectorAll(".nav-link");
-        menuSidebarLinks.forEach(link => {
-            link.addEventListener("click", () => sidebarController.closeSidebar());
-        });
-        // End Menu Sidebar //
 
         // Begin Forms //
         const demoMenu = document.getElementById("demo_form_sidebar");
@@ -63,16 +47,6 @@ export class IndexView extends BaseView {
             window.location.href = `mailto:${receiver}?subject=${subject}&body=${body}`;
         });
         // End Forms //
-    
-        // Begin Language Selector //
-        const langSelector = document.getElementById("lang_selector");
-        new LangSelectorController(langSelector);
-        // End Language Selector //
-    
-        // Begin Theme Manager //
-        const themeSwitch = document.getElementById("theme_switch");
-        new ThemeSwitchController(themeSwitch, this.themeManager);
-        // End Theme Manager //
 
         // Begin Animate Elements // // TODO: Create --> Method
         const elements = document.querySelectorAll("[data-animate]");
