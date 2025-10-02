@@ -1,5 +1,5 @@
 <section id="plans-section" class="relative flex-1 flex justify-center lg:h-fit px-6 py-12 lg:py-24 bg-[#f8f9fa] scroll-mt-32">
-    <div class="flex flex-col items-center lg:justify-evenly gap-y-12 size-full md:max-w-6xl text-center">
+    <div class="flex flex-col items-center lg:justify-evenly gap-y-6 md:gap-y-12 size-full md:max-w-6xl text-center">
 
         <div class="flex flex-col items-center">
             <h1 class="text-2xl md:text-3xl font-bold">Planes y Precios</h1>
@@ -9,98 +9,84 @@
             <p class="text-lg text-secondary-qt_grey-light max-w-3xl">Elige el plan que mejor se adapte a tu negocio.</p>
         </div>
 
-        <div id="plans" class="relative w-full p-12 md:p-0">
-            <!-- Botón Izquierda -->
-            <button id="prevBtn" class="absolute left-0 top-1/2 md:hidden -translate-y-1/2 z-10 bg-gray-800 
-                text-white size-10 rounded-full shadow hover:bg-gray-600"
-            ><i class="fas fa-arrow-left"></i></button>
-
-            <!-- Contenedor del slider -->
-            <div id="slider" class="flex md:grid md:grid-cols-3 md:items-center gap-6 px-4 py-8 snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-hide">
-                <!-- Tarjeta 1 -->
-                <div class="flex-shrink-0 w-full rounded-xl snap-center">
-                    <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
-                        shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
-                    >
-                        <h4 class="text-2xl font-semibold">Plata</h4>
-                        <div class="text-4xl font-bold">
-                            9.300<span class="text-base text-secondary-qt_grey font-medium">/día</span>
-                        </div>
-                        <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes basicos</li>
-                        </ul>
-                        <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
-                            rounded-full shadow-md transition-all duration-300 ease-in-out 
-                            hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
-                        >Ver más detalles</a>
+        <!-- Contenedor del slider -->
+        <div id="plans" class="grid md:grid-cols-3 items-center gap-y-12 md:gap-x-6 px-4 py-8 snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-hide">
+            <!-- Tarjeta 1 -->
+            <div class="rounded-xl snap-center">
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
+                >
+                    <h4 class="text-2xl font-semibold">Plata</h4>
+                    <div class="text-4xl font-bold">
+                        9.300<span class="text-base text-secondary-qt_grey font-medium">/día</span>
                     </div>
-                </div>
-                <!-- Tarjeta 2 -->
-                <div class="flex-shrink-0 w-full rounded-xl snap-center">
-                    <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-linear-to-tl from-[#cd9ffa] to-[#7a60ff] 
-                        text-white rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md 
-                        hover:-translate-y-2.5"
-                    >
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                            <span class="px-4 py-2 text-xs font-semibold bg-[#ff6b6b] text-white rounded-full shadow">
-                                Más Popular
-                            </span>
-                        </div>
-                        <h4 class="text-2xl font-semibold">Oro</h4>
-                        <div class="text-4xl font-bold">
-                            24.000<span class="text-base text-white/70 font-medium">/día</span>
-                        </div>
-                        <ul class="divide-y divide-white/30 text-sm">
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
-                        </ul>
-                        <a href="pricing.html" class="self-center px-8 py-4 bg-white text-sm text-[#7a60ff] font-semibold 
-                            rounded-full shadow-md transition-all duration-300 ease-in-out 
-                            hover:text-[#5f0099] hover:shadow-lg hover:-translate-y-1"
-                        >Ver más detalles</a>
-                    </div>
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="flex-shrink-0 w-full rounded-xl snap-center">
-                    <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
-                        shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5
-                    ">
-                        <h4 class="text-2xl font-semibold">Platino</h4>
-                        <div class="text-4xl font-bold">
-                            42.000<span class="text-base text-secondary-qt_grey font-medium">/día</span>
-                        </div>
-                        <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Campañas cormerciales</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes unificados por total sucursales</li>
-                            <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Agente IA</li>
-                        </ul>
-                        <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
-                            rounded-full shadow-md transition-all duration-300 ease-in-out 
-                            hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
-                        >Ver más detalles</a>
-                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes basicos</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
                 </div>
             </div>
-
-            <!-- Botón Derecha -->
-            <button id="nextBtn" class="absolute right-0 top-1/2 md:hidden -translate-y-1/2 z-10 bg-gray-800 
-                text-white size-10 rounded-full shadow hover:bg-gray-600"
-            ><i class="fas fa-arrow-right"></i></button>
+            <!-- Tarjeta 2 -->
+            <div class="rounded-xl snap-center">
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-linear-to-tl from-[#cd9ffa] to-[#7a60ff] 
+                    text-white rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md 
+                    hover:-translate-y-2.5"
+                >
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span class="px-4 py-2 text-xs font-semibold bg-[#ff6b6b] text-white rounded-full shadow">
+                            Más Popular
+                        </span>
+                    </div>
+                    <h4 class="text-2xl font-semibold">Oro</h4>
+                    <div class="text-4xl font-bold">
+                        24.000<span class="text-base text-white/70 font-medium">/día</span>
+                    </div>
+                    <ul class="divide-y divide-white/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-white text-sm text-[#7a60ff] font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:text-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="rounded-xl snap-center">
+                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
+                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5
+                ">
+                    <h4 class="text-2xl font-semibold">Platino</h4>
+                    <div class="text-4xl font-bold">
+                        42.000<span class="text-base text-secondary-qt_grey font-medium">/día</span>
+                    </div>
+                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Campañas cormerciales</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes unificados por total sucursales</li>
+                        <li class="flex items-center justify-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Agente IA</li>
+                    </ul>
+                    <a href="pricing.html" class="self-center px-8 py-4 bg-[#7a60ff] text-sm text-white font-semibold 
+                        rounded-full shadow-md transition-all duration-300 ease-in-out 
+                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+                    >Ver más detalles</a>
+                </div>
+            </div>
         </div>
-
-
 
         <div class="max-w-3xl text-center">
             <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 

@@ -86,22 +86,6 @@ export class IndexView extends BaseView {
         elements.forEach(el => observer.observe(el));
         // End Animate Elements //
 
-        // Begin Slider //
-        const slider = document.getElementById('slider');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        const cardWidth = slider.querySelector('div').offsetWidth;
-
-        prevBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        });
-
-        nextBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        });
-        // End Slider //
-
         // Set Redirect to `/es/` when the url is `/`
         if (location.pathname == "/") { window.location.href = `/${this.lang}/`; }
         // TODO: REFACTOR //
