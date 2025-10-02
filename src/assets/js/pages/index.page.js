@@ -86,30 +86,21 @@ export class IndexView extends BaseView {
         elements.forEach(el => observer.observe(el));
         // End Animate Elements //
 
-        // Begin Plans Section // // TODO: Enhance
-        const planWithTablesBtn = document.getElementById("plan-with-tables-btn");
-        const planWithoutTablesBtn = document.getElementById("plan-without-tables-btn");
-        
-        const planWithTables = document.getElementById("plan-with-tables");
-        const planWithoutTables = document.getElementById("plan-without-tables");
+        // Begin Slider //
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
-        function setActiveTab(activeBtn, inactiveBtn) {
-            inactiveBtn.className = "inline-block px-4 py-2 text-purple-600 rounded-t-lg border-b-2 border-transparent hover:border-purple-600";
-            activeBtn.className = "inline-block px-4 py-2 text-gray-600 rounded-t-lg border border-gray-200 border-b-transparent bg-white";
-        }
+        const cardWidth = slider.querySelector('div').offsetWidth;
 
-        planWithTablesBtn.addEventListener("click", () => {
-            planWithTables.classList.remove("hidden")
-            planWithoutTables.classList.add("hidden")
-            setActiveTab(planWithTablesBtn, planWithoutTablesBtn)
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
         });
 
-        planWithoutTablesBtn.addEventListener("click", () => {
-            planWithoutTables.classList.remove("hidden")
-            planWithTables.classList.add("hidden")
-            setActiveTab(planWithoutTablesBtn, planWithTablesBtn)
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
         });
-        // End Plans Section //
+        // End Slider //
 
         // Set Redirect to `/es/` when the url is `/`
         if (location.pathname == "/") { window.location.href = `/${this.lang}/`; }
