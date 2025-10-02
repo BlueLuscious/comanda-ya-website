@@ -97,6 +97,11 @@
                     <ul class="flex items-center gap-x-6 text-sm font-semibold uppercase">
                         {% block nav_links %}
                         {% endblock nav_links %}
+                        {% customButton id="theme_button", icon="bi-sun-fill", 
+                            iconClasses="text-xl text-primary-qt_orange-light dark:text-primary-qt_blue-darker", 
+                            extraClasses="w-fit bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-darkest 
+                                rounded-full shadow-lg hover:shadow-glow-dark-sm dark:hover:shadow-glow-light-sm"
+                        %}
                     </ul>
                 </div>
             </nav>

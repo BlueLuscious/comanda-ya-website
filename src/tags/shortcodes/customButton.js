@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
     }) {
         return `
             <button type="${type}" id="${id}" class="px-3 py-2 transition-all duration-300 ease-in-out ${extraClasses}">
-                ${icon ? `<i class="bi ${icon} text-2xl ${iconClasses}"></i>` : ""}
+                ${icon ? `<i class="bi ${icon} ${iconClasses}"></i>` : ""}
                 ${label ? `<span class="w-full ${labelClasses}">${label}</span>` : ""}
             </button>
         `;
