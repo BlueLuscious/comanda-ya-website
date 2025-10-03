@@ -1,21 +1,21 @@
-<section id="home-section" class="relative flex justify-center h-screen md:h-[80vh] p-6 bg-linear-to-l from-[#27138a] 
-    to-[#4131cc] before:content-[''] before:absolute before:inset-0 before:bg-[url('/assets/images/pattern.png')]"
+<section id="home-section" class="relative flex justify-center h-screen md:h-[80vh] p-6 bg-linear-to-t md:bg-linear-to-l 
+    from-primary to-primary-300 dark:from-primary-600 dark:to-primary-800 transition-colors duration-300 ease-in-out 
+    overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[url('/assets/images/pattern.png')]"
 >
     <div class="z-10 flex flex-col md:flex-row md:justify-between gap-y-6 md:gap-x-12 size-full md:max-w-6xl">
-        
         <!-- Caption -->
-        <div class="flex-1 flex flex-col items-stretch gap-y-6 md:gap-y-12 md:py-8 md:max-w-2/3 text-white">
-            <h1 class="text-xl md:text-4xl font-bold">La solución tecnológica que tu negocio necesita</h1>
+        <div class="flex-1 flex flex-col items-stretch gap-y-6 md:gap-y-12 md:py-8 md:max-w-2/3 text-tertiary-0">
+            <h1 class="text-xl md:text-4xl font-bold drop-shadow-lg">La solución tecnológica que tu negocio necesita</h1>
             <div class="flex flex-col gap-y-3 md:gap-y-6">
                 <p class="text-base md:text-2xl">
-                    <span class="font-bold">Transforma</span> la experiencia gastronómica de tus clientes con 
-                    <span class="font-bold">acceso instantáneo al menú, pedidos y pagos directamente desde su mesa.</span>
+                    <span class="font-bold drop-shadow-lg">Transforma</span> la experiencia gastronómica de tus clientes con 
+                    <span class="font-bold drop-shadow-lg">acceso instantáneo al menú, pedidos y pagos directamente desde su mesa.</span>
                 </p>
-                <h2 class="text-lg md:text-3xl font-bold">¡Todo con un simple escaneo de QR!</h2>
+                <h2 class="text-lg md:text-3xl font-bold drop-shadow-lg">¡Todo con un simple escaneo de QR!</h2>
             </div>
-            <button type="button" class="self-center sm:self-start px-8 py-4 bg-white text-base md:text-xl text-[#7a60ff] 
-                font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out hover:text-[#5f0099] 
-                hover:shadow-lg hover:translate-y-1 animate-heartbeat hover:animate-none" 
+            <button type="button" class="self-center sm:self-start px-8 py-4 bg-tertiary-50 dark:bg-tertiary-700 text-base md:text-xl 
+                text-secondary-600 dark:text-secondary-400 font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
+                hover:text-secondary-700 dark:hover:text-secondary-300 hover:shadow-lg hover:translate-y-1 animate-heartbeat hover:animate-none" 
                 data-demo-form-open
             >¡Solicita y proba la demo!</button>
         </div>
@@ -24,17 +24,16 @@
         <div id="phone-container" class="size-full md:max-w-1/3 perspective-midrange group">
             <div id="phone-flip" class="relative size-full transform-3d transition-transform duration-700 group-hover:rotate-y-180 will-change-transform">
                 <div id="phone-front" class="absolute size-full backface-hidden">
-                    <img src="../assets/images/phone/menu-left.png" alt="Menu" 
+                    <img src="../assets/images/phone/menu-section.png" alt="menu-section" 
                         class="size-full object-contain object-top opacity-0" data-animate
                     />
                 </div>
                 <div id="phone-back" class="absolute size-full rotate-y-180 backface-hidden">
-                    <img src="../assets/images/phone/payment-left.webp" alt="Pago" 
+                    <img src="../assets/images/phone/payment-section.png" alt="paymnet-section" 
                         class="size-full object-contain object-top opacity-0" data-animate
                     />
                 </div>
             </div>
         </div>
-
     </div>
 </section>

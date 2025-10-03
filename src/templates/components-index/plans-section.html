@@ -1,28 +1,30 @@
-<section id="plans-section" class="relative flex-1 flex justify-center lg:h-fit px-6 py-12 lg:py-24 bg-[#f8f9fa] scroll-mt-32">
+<section id="plans-section" class="relative flex-1 flex justify-center lg:h-fit px-6 py-12 lg:py-24 
+    bg-primary-50 dark:bg-tertiary-700 transition-colors duration-300 ease-in-out scroll-mt-32"
+>
     <div class="flex flex-col items-center lg:justify-evenly gap-y-6 md:gap-y-12 size-full md:max-w-6xl text-center">
 
         <div class="flex flex-col items-center">
             <h1 class="text-2xl md:text-3xl font-bold">Planes y Precios</h1>
-            <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
-                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+            <span class="relative block h-[2px] w-[50px] bg-secondary mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-secondary">
             </span>
-            <p class="text-lg text-secondary-qt_grey-light max-w-3xl">Elige el plan que mejor se adapte a tu negocio.</p>
+            <p class="text-lg text-tertiary-700 dark:text-tertiary-300 max-w-3xl">Elige el plan que mejor se adapte a tu negocio.</p>
         </div>
 
-        <div id="plans" class="grid md:grid-cols-3 items-center gap-y-12 md:gap-x-6 px-4 py-8 
-            text-left snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-hide"
-        >
-            <div class="relative flex flex-col items-stretch gap-y-6 h-full p-8 bg-whitetext-white rounded-xl 
-                shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
+        <div id="plans" class="grid md:grid-cols-3 items-center gap-y-12 md:gap-x-6 px-4 py-8 text-left">
+            <div class="relative flex flex-col items-stretch gap-y-6 h-full p-8 bg-tertiary-0 dark:bg-tertiary-800 ring-2 
+                ring-transparent dark:ring-tertiary-600 rounded-2xl shadow-center-dark transition-all duration-300 ease-in-out 
+                hover:shadow-center-dark-md hover:-translate-y-2.5"
             >
-                <div class="flex flex-col gap-y-4">
+                <!-- Silver -->
+                <div class="flex flex-col gap-y-6">
                     <h4 class="text-2xl font-semibold">Plata</h4>
                     <div class="text-4xl font-bold">
-                        9.300 ARS<span class="text-base text-secondary-qt_grey font-medium">/día</span>
+                        9.300 ARS<span class="text-base text-tertiary-700 dark:text-tertiary-300 font-medium">/día</span>
                     </div>
-                    <p class="text-sm text-secondary-qt_grey">Perfecto para pequeños negocios que recién comienzan</p>
+                    <p class="text-sm text-tertiary-700 dark:text-tertiary-300">Perfecto para pequeños negocios que recién comienzan</p>
                 </div>
-                <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
+                <ul class="divide-y divide-tertiary/30 text-sm">
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Hasta 10 mesas</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
@@ -30,35 +32,38 @@
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes basicos</li>
                 </ul>
-                <p class="flex items-center gap-x-2 text-sm text-secondary-qt_grey">
+                <p class="flex items-center gap-x-2 text-sm text-tertiary-700 dark:text-tertiary-300">
                     Cada mesa adicional: 
-                    <span class="text-base text-secondary-qt_grey-darker font-medium">
-                        $235<span class="text-xs text-secondary-qt_grey font-medium">/día</span>
+                    <span class="text-base font-medium">
+                        $235<span class="text-xs text-tertiary-700 dark:text-tertiary-300 font-medium">/día</span>
                     </span>
                 </p>
-                <button type="button" class="self-center px-8 py-4 mt-auto bg-[#7a60ff] text-sm text-white font-semibold 
-                    rounded-full shadow-md transition-all duration-300 ease-in-out 
-                    hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1" data-membership-form-open
+                <button type="button" class="self-center px-8 py-4 mt-auto bg-secondary-300 dark:bg-secondary-700 text-sm 
+                    dark:text-tertiary-0 font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
+                    hover:text-tertiary-600 dark:hover:text-tertiary-100 hover:shadow-lg hover:-translate-y-1" 
+                    data-membership-form-open
                 >Obtener plan</button>
             </div>
             
-            <div class="relative flex flex-col items-stretch gap-y-6 h-full p-8 bg-linear-to-tl from-[#cd9ffa] to-[#7a60ff] 
-                text-white rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md 
-                hover:-translate-y-2.5"
+            <!-- Gold -->
+            <div class="relative flex flex-col items-stretch gap-y-6 h-full p-8 bg-linear-to-tl from-primary-300 to-primary dark:from-primary-700 
+                dark:to-primary text-tertiary-0 dark:text-tertiary-800 ring-2 ring-transparent dark:ring-tertiary-600 
+                rounded-xl shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5"
             >
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span class="px-4 py-2 text-xs font-semibold bg-[#ff6b6b] text-white rounded-full shadow">
-                        Más Popular
-                    </span>
-                </div>
-                <div class="flex flex-col gap-y-4">
-                    <h4 class="text-2xl font-semibold">Oro</h4>
-                    <div class="text-4xl font-bold">
-                        24.000 ARS<span class="text-base text-white/70 font-medium">/día</span>
+                <div class="flex flex-col gap-y-6">
+                    <div class="flex items-center justify-between">
+                        <h4 class="text-2xl font-semibold">Oro</h4>
+                        <span class="px-4 py-2 text-xs font-semibold bg-linear-to-l from-secondary-400 to-secondary-200 
+                            dark:from-secondary-400 dark:to-secondary-700 text-primary-800 
+                            dark:text-tertiary-0 border border-primary-800 dark:border-tertiary-0 rounded-full shadow"
+                        >Más Popular</span>
                     </div>
-                    <p class="text-sm text-white/70">La opción ideal para restaurantes en crecimiento</p>
+                    <div class="text-4xl font-bold">
+                        24.000 ARS<span class="text-base text-tertiary-0/70 dark:text-tertiary-700 font-medium">/día</span>
+                    </div>
+                    <p class="text-sm text-tertiary-0/70 dark:text-tertiary-700">La opción ideal para restaurantes en crecimiento</p>
                 </div>
-                <ul class="divide-y divide-white/30 text-sm">
+                <ul class="divide-y divide-tertiary-0/30 dark:divide-tertiary-700 text-sm">
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check"></i> Mesas ilimitadas</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check"></i> Menú digital</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check"></i> QR personalizado</li>
@@ -66,49 +71,51 @@
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check"></i> Soporte por mail</li>
                     <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check"></i> Reportes avanzados</li>
                 </ul>
-                <button type="button" class="self-center px-8 py-4 mt-auto bg-white text-sm text-[#7a60ff] font-semibold 
-                    rounded-full shadow-md transition-all duration-300 ease-in-out 
-                    hover:text-[#5f0099] hover:shadow-lg hover:-translate-y-1" data-membership-form-open
+                <button type="button" class="self-center px-8 py-4 mt-auto bg-tertiary-50 dark:bg-tertiary-700 text-sm 
+                    text-secondary-600 dark:text-secondary-400 font-semibold rounded-full shadow-md transition-all duration-300 
+                    ease-in-out hover:text-secondary-700 dark:hover:text-secondary-300 hover:shadow-lg hover:-translate-y-1" 
+                    data-membership-form-open
                 >Obtener plan</button>
             </div>
             
-            <div class="rounded-xl snap-center">
-                <div class="relative flex flex-col items-stretch gap-y-6 p-8 bg-whitetext-white rounded-xl 
-                    shadow-center-dark transition-all duration-300 ease-in-out hover:shadow-center-dark-md hover:-translate-y-2.5
-                ">
-                    <div class="flex flex-col gap-y-4">
-                        <h4 class="text-2xl font-semibold">Platino</h4>
-                        <div class="text-4xl font-bold">
-                            42.000 ARS<span class="text-base text-secondary-qt_grey font-medium">/día</span>
-                        </div>
-                        <p class="text-sm text-secondary-qt_grey">Solución completa para cadenas y grandes restaurantes</p>
+            <!-- Platinum -->
+            <div class="relative flex flex-col items-stretch gap-y-6 h-full p-8 bg-tertiary-0 dark:bg-tertiary-800 ring-2 
+                ring-transparent dark:ring-tertiary-600 rounded-2xl shadow-center-dark transition-all duration-300 ease-in-out 
+                hover:shadow-center-dark-md hover:-translate-y-2.5"
+            >
+                <div class="flex flex-col gap-y-6">
+                    <h4 class="text-2xl font-semibold">Platino</h4>
+                    <div class="text-4xl font-bold">
+                        42.000 ARS<span class="text-base text-tertiary-700 dark:text-tertiary-300 font-medium">/día</span>
                     </div>
-                    <ul class="divide-y divide-secondary-qt_grey/30 text-sm">
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Mesas ilimitadas</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Campañas cormerciales</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes unificados por total sucursales</li>
-                        <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> IA personalizada</li>
-                    </ul>
-                    <button type="button" class="self-center px-8 py-4 mt-auto bg-[#7a60ff] text-sm text-white font-semibold 
-                        rounded-full shadow-md transition-all duration-300 ease-in-out 
-                        hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1" data-membership-form-open
-                    >Obtener plan</button>
+                    <p class="text-sm text-tertiary-700 dark:text-tertiary-300">Solución completa para cadenas y grandes restaurantes</p>
                 </div>
+                <ul class="divide-y divide-tertiary/30 text-sm">
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Mesas ilimitadas</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Menú digital</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> QR personalizado</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Pagos con QR</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Soporte por mail</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes avanzados</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Campañas cormerciales</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> Reportes unificados por total sucursales</li>
+                    <li class="flex items-center gap-x-3 p-2"><i class="fas fa-check text-[#28a745]"></i> IA personalizada</li>
+                </ul>
+                <button type="button" class="self-center px-8 py-4 mt-auto bg-secondary-300 dark:bg-secondary-700 text-sm 
+                    dark:text-tertiary-0 font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
+                    hover:text-tertiary-600 dark:hover:text-tertiary-100 hover:shadow-lg hover:-translate-y-1" 
+                    data-membership-form-open
+                >Obtener plan</button>
             </div>
         </div>
 
         <div class="max-w-3xl text-center">
-            <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
-                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+            <span class="relative block h-[2px] w-[50px] bg-secondary mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+                after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-secondary">
             </span>
             <h6>
                 No encontras un plan que se adapte a tu negocio? <span class="font-semibold">¡No hay problema!</span> contactanos y solicitá tu 
-                <a href="#cotizacion" class="text-blue-500 font-bold hover:underline">cotización personalizada</a>.
+                <a href="#cotizacion" class="text-primary dark:text-primary-200 font-bold hover:underline">cotización personalizada</a>.
             </h6>
         </div>
 

@@ -6,44 +6,47 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    qt_orange: {
-                        ultradark: "#3a2802", // rgb(58, 40, 2)
-                        darkest: "#5a3a04", // rgb(90, 58, 4)
-                        darker: "#a06107", // rgb(160, 97, 7)
-                        dark: "#d98f09", // rgb(217, 143, 9)
-                        DEFAULT: "#f7b40d", // rgb(247, 180, 13)
-                        light: "#f7c64b", // rgb(247, 198, 75)
-                        lighter: "#f7d789", // rgb(247, 215, 137)
-                        lightest: "#f7e9c6", // rgb(247, 233, 198)
-                        ultralight: "#fdf6e9" // rgb(253, 246, 233)
-                    },
-                    qt_blue: {
-                        ultradark: "#021c27", // rgb(2, 28, 39)
-                        darkest: "#063a57", // rgb(6, 58, 87)
-                        darker: "#117ba1", // rgb(17, 123, 161)
-                        dark: "#38b2d6", // rgb(56, 178, 214)
-                        DEFAULT: "#85d3e5", // rgb(133, 211, 229)
-                        light: "#9fe3f2", // rgb(159, 227, 242)
-                        lighter: "#bff0f9", // rgb(191, 240, 249)
-                        lightest: "#d9f8fc", // rgb(217, 248, 252)
-                        ultralight: "#eefcfe", // rgb(238, 252, 254)
-                    },
+                    DEFAULT: "#2596be", // rgb(37, 150, 190)
+                    50: "#eaf6fb",
+                    100: "#d4eef7",
+                    200: "#aadcee",
+                    300: "#7fcbe6",
+                    400: "#54bade",
+                    500: "#2596be", // rgb(37, 150, 190)
+                    600: "#1d7695",
+                    700: "#15546b",
+                    800: "#0f3d4d",
+                    900: "#08222b",
+                    950: "#030d11",
                 },
                 secondary: {
-                    qt_grey: {
-                        ultradark: "#0d0d0d", // rgb(13, 13, 13)
-                        darkest: "#1a1a1a", // rgb(26, 26, 26)
-                        darker: "#333333", // rgb(51, 51, 51)
-                        dark: "#4d4d4d", // rgb(77, 77, 77)
-                        DEFAULT: "#666666", // rgb(102, 102, 102)
-                        light: "#808080", // rgb(128, 128, 128)
-                        lighter: "#999999", // rgb(153, 153, 153)
-                        lightest: "#bfbfbf", // rgb(191, 191, 191)
-                        ultralight: "#d9d9d9", // rgb(217, 217, 217)
-                        ultrawhite: "#f0f0f0", // rgb(240, 240, 240)
-                    },
+                    DEFAULT: "#ff9800", // rgb(255, 152, 0)
+                    50: "#fff8f2",
+                    100: "#ffeeda",
+                    200: "#ffdbb0",
+                    300: "#ffc37a",
+                    400: "#ffa940",
+                    500: "#ff9800", // rgb(255, 152, 0)
+                    600: "#e68a00",
+                    700: "#cc7a00",
+                    800: "#995b00",
+                    900: "#663d00",
+                    950: "#331e00",
                 },
-                tertiary: {},
+                tertiary: {
+                    DEFAULT: "#666666", // rgb(102, 102, 102)
+                    0: "#ffffff", // rgb(255, 255, 255)
+                    50: "#f0f0f0", // rgb(240, 240, 240)
+                    100: "#d9d9d9", // rgb(217, 217, 217)
+                    200: "#bfbfbf", // rgb(191, 191, 191)
+                    300: "#999999", // rgb(153, 153, 153)
+                    400: "#808080", // rgb(128, 128, 128)
+                    500: "#666666", // rgb(102, 102, 102)
+                    600: "#4d4d4d", // rgb(77, 77, 77)
+                    700: "#333333", // rgb(51, 51, 51)
+                    800: "#1a1a1a", // rgb(26, 26, 26)
+                    900: "#0d0d0d", // rgb(13, 13, 13)
+                },
             },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],

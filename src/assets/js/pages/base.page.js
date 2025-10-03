@@ -38,7 +38,7 @@ export class CustomBaseView extends BaseView {
 
         const themeButton = document.getElementById("theme_button");
         if (themeButton) {
-            new ThemeButtonController(themeButton, this.themeManager, { iconSun: "bi-sun-fill", iconMoon: "bi-moon-fill" });
+            new ThemeButtonController(themeButton, this.themeManager, { iconSun: "bi-moon-fill", iconMoon: "bi-sun-fill" });
         }
         // End Theme Manager //
     }

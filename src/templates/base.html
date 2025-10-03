@@ -19,60 +19,38 @@
     {% block extra_heads %}{% endblock extra_heads %}
     <!-- End - Extra Heads -->
 </head>
-<body data-filename="{{ fileName }}" class="body flex min-h-screen font-poppins font-normal">
+<body data-filename="{{ fileName }}" class="body flex min-h-screen text-tertiary-800 dark:text-tertiary-200 font-poppins font-normal">
 
     <!-- Begin Sidebar -->
     {% block sidebar %}
     {% customSidebar id="sidebar_menu", side="translate-x-full" %}
-        <div class="z-20 flex flex-col size-full px-3 bg-white dark:bg-secondary-qt_grey-darker 
-            text-secondary-qt_grey-darkest dark:text-secondary-qt_grey-lightest rounded-l-xl transition-colors duration-300 
-            ease-in-out"
-        >
+        <div class="z-20 flex flex-col size-full px-3 bg-tertiary-50 dark:bg-tertiary-700 rounded-l-xl transition-colors duration-300 ease-in-out">
             <!-- Title -->
-            <div class="flex items-center justify-between gap-x-2 py-5 border-b border-secondary-qt_grey-darkest 
-                dark:border-secondary-qt_grey-lightest"
-            >
+            <div class="flex items-center justify-between gap-x-2 py-5 border-b border-tertiary-800 dark:border-tertiary-200">
                 <h1 class="px-3 py-2 text-xl font-bold">Menu</h1>
                 {% customButton id="sidebar_menu_close", icon="bi-x", iconClasses="text-3xl", 
-                    extraClasses="z-0 md:hidden w-fit text-secondary-qt_grey-extralight hover:shadow-glow-dark-md"
+                    extraClasses="z-0 w-fit hover:shadow-glow-dark-md"
                 %}
             </div>
             
             <!-- Content -->
-            <nav class="flex-1 flex flex-col gap-y-6 h-full py-5 px-2 font-semibold overflow-y-auto 
-                overscroll-contain scrollbar-hide"
-            >
-                <div class="flex flex-col gap-y-3">
-                    <h2 class="flex items-center gap-x-2 text-secondary-qt_grey-ultradark dark:text-secondary-qt_grey-ultralight">
-                        <i class="bi bi-compass text-md"></i> <span class="text-lg">{{ "navigation" | i18n }}</span>
-                    </h2>
-                    <ul class="flex flex-col gap-y-3 gap-x-6 text-sm font-semibold uppercase">
-                        {% block nav_links %}
-                        {% endblock nav_links %}
-                    </ul>
-                </div>
-
-                <div class="flex flex-col gap-y-3">
-                    <h2 class="flex items-center gap-x-2 text-secondary-qt_grey-ultradark dark:text-secondary-qt_grey-ultralight">
-                        <i class="bi bi-sliders text-md"></i> <span class="text-lg">{{ "preferences" | i18n }}</span>
-                    </h2>
-                    <div class="grid grid-cols-2 place-items-center gap-x-3">
-                        {% langSelector id="lang_selector", buttonIcon="bi-chevron-down", 
-                            buttonClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark 
-                                border-secondary-qt_grey-lightest dark:border-secondary-qt_grey", 
-                            iconClasses="text-secondary-qt_grey-dark dark:text-secondary-qt_grey-light", 
-                            dropdownClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark
-                                border-secondary-qt_grey-lightest dark:border-secondary-qt_grey"
-                        %}
-        
-                        {% customSwitch id="theme_switch", leftIcon="bi-sun-fill", rightIcon="bi-moon-fill", 
-                            extraClasses="p-1 bg-secondary-qt_grey-ultralight dark:bg-secondary-qt_grey-darkest 
-                                border-secondary-qt_grey-ultralight dark:border-secondary-qt_grey-darkest", 
-                            leftIconClasses="text-xl text-primary-qt_orange-light", 
-                            rightIconClasses="text-xl text-primary-qt_blue-darker", 
-                            thumbClasses="bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-dark" 
-                        %}
-                    </div>
+            <nav class="flex-1 flex flex-col gap-y-6 h-full py-5 px-2 font-semibold overflow-y-auto overscroll-contain scrollbar-hide">
+                <ul class="flex flex-col gap-y-3 gap-x-6 font-semibold uppercase">
+                    {% block nav_links %}
+                    {% endblock nav_links %}
+                </ul>
+                <div class="grid grid-cols-2 place-items-center gap-x-3 mt-auto">
+                    {% langSelector id="lang_selector", buttonIcon="bi-chevron-up", 
+                        buttonClasses="bg-tertiary-50 dark:bg-tertiary-600 border-tertiary-200 dark:border-tertiary-400", 
+                        iconClasses="text-tertiary-600 dark:text-tertiary-300", 
+                        dropdownClasses="bottom-full bg-tertiary-50 dark:bg-tertiary-600 border-tertiary-200 dark:border-tertiary-400"
+                    %}
+    
+                    {% customSwitch id="theme_switch", leftIcon="bi-sun-fill", rightIcon="bi-moon-fill", 
+                        extraClasses="p-1 bg-tertiary-100 dark:bg-tertiary-800 border-tertiary-100 dark:border-tertiary-800", 
+                        leftIconClasses="text-xl text-secondary-300", rightIconClasses="text-xl text-primary-600", 
+                        thumbClasses="bg-tertiary-50 dark:bg-tertiary-600" 
+                    %}
                 </div>
             </nav>
         </div>
@@ -83,24 +61,28 @@
     <!-- Begin Main Content -->
     <div class="z-10 flex-1 flex flex-col">
         {% block navbar %}
-        <header id="header" class="z-20 sticky top-0 flex justify-center w-full px-4 py-2 bg-linear-to-l from-[#27138a] to-[#4131cc]
-            before:content-[''] before:absolute before:inset-0 before:bg-[url('/assets/images/pattern.png')]"
+        <header id="header" class="z-20 sticky top-0 flex justify-center w-full px-4 py-2 bg-primary-300 dark:bg-primary-800 
+            md:bg-linear-to-l md:from-primary-500 md:to-primary-300 md:dark:from-primary-600 md:dark:to-primary-800 transition-colors 
+            duration-300 ease-in-out before:content-[''] before:absolute before:inset-0 before:bg-[url('/assets/images/pattern.png')]"
         >
-            <nav id="navbar" class="z-10 flex items-center justify-between md:justify-around size-full max-h-24 md:max-h-36 text-white">
-                <img src="../assets/images/cy-logo-negative.png" alt="comanda-ya-logo" class="w-24 md:w-36" />
+            <nav id="navbar" class="z-10 flex items-center justify-between md:justify-around size-full max-h-24 md:max-h-36 text-tertiary-0">
+                <img src="../assets/images/cy-logo-positive.png" alt="comanda-ya-logo" 
+                    class="w-24 md:w-36 dark:hidden transition-all duration-300 ease-in-out dark:opacity-0" 
+                />
+                <img src="../assets/images/cy-logo-negative.png" alt="comanda-ya-logo-dark" 
+                    class="w-24 md:w-36 hidden dark:block transition-all duration-300 ease-in-out opacity-0 dark:opacity-100" 
+                />
 
                 {% customButton id="sidebar_menu_button", icon="bi-list", iconClasses="text-3xl", 
-                    extraClasses="z-0 md:hidden w-fit text-secondary-qt_grey-extralight hover:shadow-glow-dark-md"
+                    extraClasses="z-0 md:hidden w-fit text-tertiary-50"
                 %}
 
                 <div id="navbar-nav" class="hidden md:block">
                     <ul class="flex items-center gap-x-6 text-sm font-semibold uppercase">
                         {% block nav_links %}
                         {% endblock nav_links %}
-                        {% customButton id="theme_button", icon="bi-sun-fill", 
-                            iconClasses="text-xl text-primary-qt_orange-light dark:text-primary-qt_blue-darker", 
-                            extraClasses="w-fit bg-secondary-qt_grey-ultrawhite dark:bg-secondary-qt_grey-darkest 
-                                rounded-full shadow-lg hover:shadow-glow-dark-sm dark:hover:shadow-glow-light-sm"
+                        {% customButton id="theme_button", icon="bi-moon-fill", iconClasses="text-xl text-primary-600 dark:text-secondary-300", 
+                            extraClasses="w-fit bg-tertiary-50 dark:bg-tertiary-700 rounded-full shadow-lg"
                         %}
                     </ul>
                 </div>
@@ -113,10 +95,10 @@
             {% endblock content %}
         </div>
 
-        <footer class="flex justify-center p-4 bg-white">
+        <footer class="flex justify-center p-4 bg-tertiary-0 dark:bg-tertiary-700">
             <p class="text-sm text-center">
                 © 2025 ComandaYa - Todos los derechos reservados. 
-                <a href="https://quinoto.tech/es/" class="text-[#5f0099] hover:underline">Powered by Quinoto Tech</a>
+                <a href="https://quinoto.tech/es/" class="text-secondary-600 dark:text-secondary-400 hover:underline">Powered by Quinoto Tech</a>
             </p>
         </footer>
     </div>
