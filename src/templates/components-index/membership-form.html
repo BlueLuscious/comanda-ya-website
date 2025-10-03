@@ -1,98 +1,110 @@
 {% customSidebar id="membership_form_sidebar", side="translate-x-full", maxWidth="max-w-4xl", displayClass="block" %}
-<div class="z-40 flex flex-col gap-y-6 size-full px-3 py-5 bg-[#f8f9fa] dark:bg-secondary-qt_grey-darker 
-    text-secondary-qt_grey-darkest dark:text-secondary-qt_grey-lightest rounded-l-xl transition-colors duration-300 
-    ease-in-out">
-
+<div class="z-40 flex flex-col gap-y-6 size-full px-3 py-5 bg-tertiary-0 dark:bg-tertiary-700 
+    rounded-l-xl transition-colors duration-300 ease-in-out"
+>
     <!-- Title -->
     <header class="flex flex-col items-center justify-center text-center">
-        <h1 class="px-3 py-2 text-xl md:text-3xl text-center font-bold">Formulario de Adhesión</h1>
-        <span class="relative block h-[2px] w-[50px] bg-[#8e1efc] mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
-            after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-[#8e1efc]">
+        <h1 class="px-3 py-2 text-xl md:text-3xl font-bold">Formulario de Adhesión</h1>
+        <span class="relative block h-[2px] w-[50px] bg-secondary mx-auto my-5 after:content-[''] after:absolute after:left-1/2 
+            after:-ml-[75px] after:w-[150px] after:h-[2px] after:border-b-2 after:border-dashed after:border-secondary">
         </span>
-        <p class="text-base max-w-xl">Completá todos los campos requeridos para adherirte al servicio</p>
+        <p class="text-base text-tertiary-700 dark:text-tertiary-30 max-w-xl">
+            Completá todos los campos requeridos para adherirte al servicio
+        </p>
     </header>
 
     <!-- Form -->
     <form id="membership_form" enctype="text/plain" class="flex-1 flex flex-col gap-y-8 py-3 font-semibold overflow-hidden">
         <!-- User Data -->
-        <div class="flex flex-col gap-6 p-3 border-y border-secondary-qt_grey-lightest overflow-y-auto overscroll-contain">
-            <fieldset class="flex flex-col gap-y-6 p-4 border border-[#858788] rounded-lg">
+        <div class="flex flex-col gap-6 p-3 border-y border-tertiary-200 dark:border-tertiary overflow-y-auto overscroll-contain">
+            <fieldset class="flex flex-col gap-y-6 p-4 border border-tertiary-200 dark:border-tertiary rounded-lg">
                 <legend class="font-bold text-lg">Datos de Usuario</legend>
 
                 {% customSwitch id="person_switch", leftText="Persona física", rightText="Persona jurídica", 
-                    extraClasses="p-1 bg-white border-transparent ring-2 ring-[#7a60ff]", thumbClasses="bg-[#7a60ff40] shadow-none" 
+                    extraClasses="p-1 border-transparent ring-2 ring-secondary", thumbClasses="bg-secondary/30 shadow-none" 
                 %}
             
                 <div class="grid md:grid-cols-2 gap-4">
                     <!-- Natural Person -->
                     <div class="flex flex-col gap-y-2" data-natural-person>
-                        <label for="membership_full_name">Nombre completo <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_full_name" name="membership_full_name" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_full_name">Nombre completo <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_full_name" name="membership_full_name" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-natural-person>
-                        <label for="membership_cuil">Cuil <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_cuil" name="membership_cuil" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_cuil">Cuil <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_cuil" name="membership_cuil" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-natural-person>
-                        <label for="membership_physical_address">Domicilio real <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_physical_address" name="membership_physical_address" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_physical_address">Domicilio real <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_physical_address" name="membership_physical_address" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
 
                     <!-- Legal Person -->
                     <div class="flex flex-col gap-y-2" data-legal-person>
-                        <label for="membership_company_name">Razón Social <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_company_name" name="membership_company_name" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_company_name">Razón Social <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_company_name" name="membership_company_name" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-legal-person>
-                        <label for="membership_cuit">Cuit <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_cuit" name="membership_cuit" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_cuit">Cuit <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_cuit" name="membership_cuit" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-legal-person>
-                        <label for="membership_legal_domicile">Domicilio Legal <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_legal_domicile" name="membership_legal_domicile" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_legal_domicile">Domicilio Legal <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_legal_domicile" name="membership_legal_domicile" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-legal-person>
-                        <label for="membership_attorney">Representante Legal / Apoderado <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_attorney" name="membership_attorney" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_attorney">Representante Legal / Apoderado <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_attorney" name="membership_attorney" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2" data-legal-person>
-                        <label for="membership_position">Cargo <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_position" name="membership_position" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_position">Cargo <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_position" name="membership_position" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
 
                     <!-- Both -->
                     <div class="flex flex-col gap-y-2">
-                        <label for="membership_dni">DNI / Documento <span class="text-red-600">*</span></label>
-                        <input type="text" id="membership_dni" name="membership_dni" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_dni">DNI / Documento <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="text" id="membership_dni" name="membership_dni" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2">
-                        <label for="membership_email">Email <span class="text-red-600">*</span></label>
-                        <input type="email" id="membership_email" name="membership_email" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]" required
+                        <label for="membership_email">Email <span class="text-[#fe3b3b]">*</span></label>
+                        <input type="email" id="membership_email" name="membership_email" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30" required
                         >
                     </div>
                     <div class="flex flex-col gap-y-2">
                         <label for="membership_phone_number">Teléfono</label>
-                        <input type="tel" id="membership_phone_number" name="membership_phone_number" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                        <input type="tel" id="membership_phone_number" name="membership_phone_number" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30"
                         >
                     </div>
 
@@ -100,25 +112,25 @@
             </fieldset>
 
             <!-- Plan -->
-            <fieldset class="flex flex-col gap-y-6 p-4 border border-[#858788] rounded-lg">
+            <fieldset class="flex flex-col gap-y-6 p-4 border border-tertiary-200 dark:border-tertiary rounded-lg">
                 <legend class="font-bold text-lg">Plan Contratado</legend>
 
                 <div class="flex justify-between md:justify-start gap-x-2 md:gap-x-8">
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_plan" value="silver" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_plan" value="silver" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Plata</span>
                     </label>
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_plan" value="gold" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_plan" value="gold" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Oro</span>
                     </label>
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_plan" value="platinum" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_plan" value="platinum" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Platino</span>
                     </label>
@@ -126,8 +138,9 @@
                 <div class="flex flex-col md:flex-row items-center gap-4">
                     <div class="flex flex-col gap-y-2 w-full">
                         <label for="membership_modality">Modalidad</label>
-                        <select id="membership_modality" name="membership_modality" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                        <select id="membership_modality" name="membership_modality" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 text-lg border-2 
+                            border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30"
                         >
                             <option value="biannual">Semestral</option>
                             <option value="annual">Anual</option>
@@ -135,33 +148,34 @@
                     </div>
                     <div class="flex flex-col gap-y-2 w-full">
                         <label for="membership_effective_start_date">Fecha de inicio de vigencia</label>
-                        <input type="date" id="membership_effective_start_date" name="membership_effective_start_date" class="p-3 text-lg border-2 border-[#d9dcdf] rounded-lg outline-none 
-                            transition-all duration-300 ease-in-out focus:border-[#7a60ff] focus:ring-3 focus:ring-[#7a60ff40]"
+                        <input type="date" id="membership_effective_start_date" name="membership_effective_start_date" class="p-3 bg-tertiary-50 dark:bg-tertiary-600 
+                            text-lg border-2 border-tertiary-200 dark:border-tertiary rounded-lg outline-none transition-all duration-300 ease-in-out 
+                            focus:border-secondary focus:ring-3 focus:ring-secondary/30"
                         >
                     </div>
                 </div>
             </fieldset>
 
             <!-- Payment Method -->
-            <fieldset class="border p-4 rounded-lg">
+            <fieldset class="p-4 border border-tertiary-200 dark:border-tertiary rounded-lg">
                 <legend class="font-bold text-lg">Medio de Pago</legend>
 
                 <div class="flex flex-col lg:flex-row gap-y-2 md:gap-x-8">
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_payment_method" value="card" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_payment_method" value="card" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Tarjeta de Crédito/Débito</span>
                     </label>
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_payment_method" value="transfer" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_payment_method" value="transfer" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Transferencia Bancaria</span>
                     </label>
                     <label class="flex items-center gap-3 cursor-pointer">
-                        <input type="radio" name="membership_payment_method" value="other" class="appearance-none size-5 border-2 border-gray-400 
-                            rounded-full transition-colors checked:bg-[#7a60ff40] checked:border-[#7a60ff]" 
+                        <input type="radio" name="membership_payment_method" value="other" class="appearance-none size-5 border-2 border-tertiary-200 
+                            dark:border-tertiary rounded-full transition-colors checked:bg-secondary/30 checked:border-secondary" 
                         />
                         <span>Otro</span>
                     </label>
@@ -170,31 +184,25 @@
             </fieldset>
 
             <!-- Terms & Conditions -->
-            <fieldset class="border p-4 rounded-lg">
+            <fieldset class="flex flex-col gap-y-3 p-4 border border-tertiary-200 dark:border-tertiary rounded-lg">
                 <legend class="font-bold text-lg">Declaración y Aceptación</legend>
-                <p class="text-sm">
-                    Declaro que he leído, comprendido y aceptado los términos y condiciones de uso de ComandaYa.app
-                </p>
-
-                <label class="flex items-center gap-3 mt-3 cursor-pointer">
-                    <input type="checkbox" name="membership_accept_terms" class="size-5 rounded border-gray-300 
-                        text-indigo-600 focus:ring-indigo-500 cursor-pointer" required
-                    >
+                <p class="text-sm">Declaro que he leído, comprendido y aceptado los términos y condiciones de uso de ComandaYa.app</p>
+                <label class="flex items-center gap-x-3 cursor-pointer">
+                    <input type="checkbox" name="membership_accept_terms" class="size-8 md:size-6 rounded cursor-pointer" required>
                     <span>Acepto recibir información y confirmo mi adhesión al servicio</span>
                 </label>
             </fieldset>
         </div>
 
-        
         <!-- Buttons -->
         <div class="flex items-center justify-center gap-x-6 mt-auto">
-            <button type="button" id="membership_form_sidebar_close" class="self-center px-8 py-4 bg-white text-sm 
-                text-[#fe3b3b] font-semibold rounded-full shadow-center-dark transition-all duration-300 ease-in-out 
-                hover:text-[#cc220f] hover:shadow-center-dark-md hover:-translate-y-1"
+            <button type="button" id="membership_form_sidebar_close" class="self-center px-8 py-4 bg-[#ffdcdc] dark:bg-[#cb3a3a] text-sm 
+                text-[#fe3b3b] dark:text-[#ffdcdc] font-semibold rounded-full shadow-center-dark transition-all duration-300 ease-in-out 
+                hover:text-[#cc220f] dark:hover:text-[#fcf3f3] hover:shadow-lg hover:-translate-y-1"
             >Cerrar</button>
-            <button type="submit" id="membership_form_sidebar_submit" class="self-center px-8 py-4 bg-[#7a60ff] text-sm 
-                text-white font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
-                hover:bg-[#5f0099] hover:shadow-lg hover:-translate-y-1"
+            <button type="submit" id="membership_form_sidebar_submit" class="self-center px-8 py-4 bg-secondary-300 dark:bg-secondary-700 
+                text-sm dark:text-tertiary-0 font-semibold rounded-full shadow-md transition-all duration-300 ease-in-out 
+                hover:text-tertiary-600 dark:hover:text-tertiary-100 hover:shadow-lg hover:-translate-y-1"
             >Enviar Adhesión</button>
         </div>
     </form>
