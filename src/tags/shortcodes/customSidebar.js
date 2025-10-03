@@ -7,8 +7,8 @@ module.exports = function (eleventyConfig) {
         return `
         <div class="${displayClass !== "" ? displayClass : "md:hidden"}">
             <div id="${id}_backdrop" class="z-20 fixed inset-0 hidden backdrop-blur-sm opacity-0 transition-opacity duration-300 
-                ${colour_backdrop !== "" ? colour_backdrop : "bg-secondary-qt_grey-darker/50"}
-                ${dark_colour_backdrop !== "" ? dark_colour_backdrop : "dark:bg-secondary-qt_grey/50"}"
+                ${colour_backdrop !== "" ? colour_backdrop : "bg-tertiary-700/50"}
+                ${dark_colour_backdrop !== "" ? dark_colour_backdrop : "dark:bg-tertiary/50"}"
             ></div>
 
             <aside id="${id}" class="z-20 fixed top-0 right-0 w-full h-dvh 

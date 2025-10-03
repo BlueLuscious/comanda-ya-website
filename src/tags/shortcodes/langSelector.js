@@ -25,8 +25,8 @@ module.exports = function (eleventyConfig) {
                     ${localeLinks.map(link => `
                     <li>
                         <a href="${link.url}" lang="${link.lang}" hreflang="${link.lang}"
-                            class="flex items-center gap-x-2 w-full p-2 text-sm text-left hover:bg-secondary-qt_grey/15
-                            dark:hover:bg-secondary-qt_grey/40"
+                            class="flex items-center gap-x-2 w-full p-2 text-sm text-left hover:bg-tertiary/15
+                            dark:hover:bg-tertiary/40"
                         >
                             <img src="/assets/images/langs/flags/${link.lang}.png" class="size-4 rounded-full">
                             ${(i18n("languages", {}, currentLang)?.[link.lang]?.name ?? link.lang)}
