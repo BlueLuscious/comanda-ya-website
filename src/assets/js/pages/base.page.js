@@ -28,8 +28,8 @@ export class CustomBaseView extends BaseView {
         // End Menu Sidebar //
     
         // Begin Language Selector //
-        const langSelector = document.getElementById("lang_selector");
-        if (langSelector) new LangSelectorController(langSelector);
+        // const langSelector = document.getElementById("lang_selector");
+        // if (langSelector) new LangSelectorController(langSelector);
         // End Language Selector //
     
         // Begin Theme Manager //
